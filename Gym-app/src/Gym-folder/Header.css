@@ -1,0 +1,217 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row;
+  margin: 6px 10px 0px 10px;
+  position: fixed;
+  z-index: 2;
+  width: 76%;
+  background-color: transparent;
+}
+.Header .Header-fit {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row;
+  color: white;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.Header .Header-fit-f {
+  color: white;
+  font-size: 40px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Charmonman;
+}
+.Header .Header-fit-club {
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+.Header .Header-fit-club-p {
+  text-align: left;
+}
+.Header .Header-menu {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row;
+  margin-top: 20px;
+}
+.Header .Header-menu-nav {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row;
+  position: relative;
+}
+.Header .Header-menu-bar {
+  display: none;
+}
+.Header .Header-menu-ul {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row;
+  position: relative;
+}
+.Header .Header-menu-li {
+  display: block;
+  cursor: pointer;
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  padding: 0px 2px;
+}
+@media screen and (max-width: 800px) {
+  .Header .Header-menu-nav {
+    display: none;
+  }
+  .Header .Header-menu-nav1 {
+    position: absolute;
+    height: 92vh;
+    top: 50px;
+    width: 75%;
+    left: 10px;
+    background-color: green;
+    border-radius: 20px;
+    animation: dropdown 1.5s linear forwards;
+    z-index: 1;
+  }
+  @keyframes dropdown {
+    0% {
+      transform: translateY(-450px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  .Header .Header-menu-ul {
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .Header .Header-menu-li {
+    line-height: 100px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .Header .Header-menu-bar1 {
+    position: fixed;
+    cursor: pointer;
+    width: 35px;
+    height: 2px;
+    background-color: white;
+    margin-top: -10px;
+    margin-right: 30px;
+    display: block;
+  }
+  .Header .Header-menu-bar1::before {
+    position: absolute;
+    content: "";
+    cursor: pointer;
+    width: 34px;
+    height: 2px;
+    background-color: white;
+    top: 8px;
+    left: 0px;
+  }
+  .Header .Header-menu-bar1::after {
+    position: absolute;
+    content: "";
+    cursor: pointer;
+    width: 27px;
+    height: 2px;
+    background-color: white;
+    top: 15px;
+    left: 0px;
+  }
+  .Header .Header-menu-close {
+    display: none;
+  }
+  .Header .Header-menu-bar {
+    position: relative;
+    cursor: pointer;
+    width: 35px;
+    height: 2px;
+    background-color: white;
+    margin-top: -10px;
+    margin-right: 28px;
+    animation: rotates-all2 2s linear forwards;
+    display: block;
+  }
+  .Header .Header-menu-bar::before {
+    position: absolute;
+    content: "";
+    cursor: pointer;
+    width: 34px;
+    height: 2px;
+    background-color: white;
+    top: 8px;
+    left: 0px;
+    animation: rotates-all 2s linear forwards;
+  }
+  .Header .Header-menu-bar::after {
+    position: absolute;
+    content: "";
+    cursor: pointer;
+    width: 27px;
+    height: 2px;
+    background-color: white;
+    top: 15px;
+    left: 0px;
+    animation: rotates-all1 2s linear forwards;
+  }
+  @keyframes rotates-all {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      width: 28px;
+      transform: rotate(45deg);
+      background-color: orange;
+    }
+  }
+  @keyframes rotates-all1 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      width: 28px;
+      top: 8px;
+      background-color: orange;
+      transform: rotate(-40deg);
+    }
+  }
+  @keyframes rotates-all2 {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      width: 0px;
+      height: 0px;
+      top: -5px;
+    }
+  }
+}
+
+.active {
+  color: orange;
+  border-bottom: 1.7px solid white;
+  font-weight: 700;
+  padding: 10px;
+}/*# sourceMappingURL=Header.css.map */

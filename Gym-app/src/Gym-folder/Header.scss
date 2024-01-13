@@ -1,0 +1,206 @@
+@import 'variable';
+
+.Header{
+    @include Flex(row,space-between,10px);
+    margin: 6px 10px 0px 10px;
+    position: fixed;
+    z-index: 2;
+    width: 76%;
+    background-color: transparent;
+
+
+    #{&}-fit{
+        @include Flex(row,center,10px);
+        color: white;
+        margin-top: 10px;
+        margin-left: 20px;
+
+        &-f{
+            color: white;
+            font-size: 40px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-family: Charmonman;
+        }
+        &-club{
+            position: relative;
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+            &-p{
+                text-align: left;
+            }
+        }
+    }
+
+
+
+    #{&}-menu{
+        @include Flex(row,center,10px);
+        margin-top: 20px;
+
+        &-nav{
+            @include Flex(row,center,10px);
+            position: relative;
+        }
+        &-bar{
+            display: none;
+        }
+
+        &-ul{
+            @include Flex(row,center,10px);
+            position: relative;
+        }
+        &-li{
+            display: block;
+            cursor: pointer;
+            list-style-type: none;
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 500;
+            color: rgb(255, 255, 255);
+            padding: 0px 2px;
+
+        }
+        
+        @include Mobile(800px) { 
+            &-nav{ display: none;}
+            &-nav1{ 
+                position: absolute;
+                height: 92vh; 
+                top: 50px; 
+                width: 75%;   
+                left: 10px;
+                background-color: green;
+                border-radius: 20px;
+                animation: dropdown 1.5s linear forwards;
+                z-index: 1;
+            } 
+            @keyframes dropdown {
+                0%{
+                    transform: translateY(-450px);
+                }
+                100%{
+                    transform: translateY(0px);
+                }
+            }
+
+            &-ul{ 
+                display: block; 
+                text-align: center;
+                margin-bottom: 20px;
+            }    
+            &-li{
+                line-height: 100px;
+                font-size: 18px;
+                font-weight: 700;
+            }
+            &-bar1{
+                // @include Flex(column,center,1px);
+                position: fixed;
+                cursor: pointer;
+                width: 35px;
+                height: 2px;
+                background-color: white;
+                margin-top: -10px;
+                margin-right: 30px;
+                display: block;
+
+                &::before{
+                    @include before;
+                    width: 34px;
+                    height: 2px;
+                    background-color: white;
+                    top: 8px;
+                    left: 0px;
+                }
+                
+                &::after{
+                    @include before;
+                    width: 27px;
+                    height: 2px;
+                    background-color: white;
+                    top: 15px;
+                    left: 0px;
+                }
+            }
+            &-close{
+              display: none;
+            }
+
+            &-bar{
+                // @include Flex(column,center,1px);
+                position: relative;
+                cursor: pointer;
+                width: 35px;
+                height: 2px;
+                background-color: white;
+                margin-top: -10px;
+                margin-right: 28px;
+                animation: rotates-all2 2s linear forwards;
+                display: block;
+
+                &::before{
+                    @include before;
+                    width: 34px;
+                    height: 2px;
+                    background-color: white;
+                    top: 8px;
+                    left: 0px;
+                    animation: rotates-all 2s linear forwards;
+                }
+                
+                &::after{
+                    @include before;
+                    width: 27px;
+                    height: 2px;
+                    background-color: white;
+                    top: 15px;
+                    left: 0px;
+                    animation: rotates-all1 2s linear forwards;
+
+                }
+                @keyframes rotates-all {
+                    0%{
+                        transform: rotate(0deg);
+                    }
+                    100%{
+                        width: 28px;
+                        transform: rotate(45deg);
+                        background-color: orange;
+                    }
+                }
+                @keyframes rotates-all1 {
+                    0%{
+                        transform: rotate(0deg);
+                    }
+                    100%{
+                        width: 28px;
+                        top: 8px;
+                        background-color: orange;
+                        transform: rotate(-40deg);
+                    }
+                }
+                @keyframes rotates-all2 {
+                    0%{
+                        transform: rotate(0deg);
+                    }
+                    100%{
+                        width: 0px;
+                        height: 0px;
+                        top: -5px;
+                    }
+                }
+            }
+
+        }
+
+    }
+}
+
+
+.active{
+    color: orange;
+    border-bottom: 1.7px solid white;
+    font-weight: 700;
+    padding: 10px;
+}

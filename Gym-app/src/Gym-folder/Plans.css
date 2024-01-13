@@ -1,0 +1,173 @@
+.Plans {
+  min-height: 100vh;
+  background: radial-gradient(rgba(233, 129, 11, 0.368627451), #303c40);
+}
+.Plans .Plans-main {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 0px;
+  flex-direction: column;
+  position: relative;
+}
+.Plans .Plans-main-words {
+  position: relative;
+  margin: 80px 0px 20px 0px;
+  font-size: 40px;
+  font-weight: 800;
+  color: white;
+  text-transform: uppercase;
+}
+.Plans .Plans-main-words-span {
+  margin: 0px 40px 0px 40px;
+  color: transparent;
+  background-color: transparent;
+  -webkit-text-stroke: 2px lightgray;
+}
+.Plans .Plans-main-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 240px));
+  justify-content: center;
+  text-align: left;
+  width: 100%;
+  row-gap: 20px;
+  column-gap: 30px;
+  margin-top: 20px;
+}
+.Plans .Plans-main-box-boxs {
+  text-align: left;
+  width: 240px;
+  height: auto;
+  background: rgb(79, 76, 76);
+  filter: brightness(2px);
+  padding: 15px 0px 15px 15px;
+  border: none;
+  border-radius: 5px;
+  animation: box 2s linear forwards;
+}
+@keyframes box {
+  0% {
+    transform: translateX(-200px);
+  }
+}
+.Plans .Plans-main-box-boxs-icon {
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: lightgray;
+}
+.Plans .Plans-main-box-boxs-h1 {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 800;
+  color: rgba(211, 211, 211, 0.955);
+  margin-bottom: 20px;
+}
+.Plans .Plans-main-box-boxs-price {
+  font-size: 30px;
+  font-weight: 600;
+  color: lightgray;
+  margin-bottom: 20px;
+}
+.Plans .Plans-main-box-boxs-div {
+  display: flex;
+  text-align: left;
+  gap: 20px;
+  flex-direction: column;
+  position: relative;
+}
+.Plans .Plans-main-box-boxs-div-icon {
+  display: flex;
+  text-align: left;
+  gap: 10px;
+  flex-direction: row;
+  color: rgba(211, 211, 211, 0.921);
+  font-size: 16px;
+  font-weight: 500;
+}
+.Plans .Plans-main-box-boxs-div-read {
+  position: relative;
+  color: rgba(211, 211, 211, 0.921);
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.Plans .Plans-main-box-boxs-btn {
+  position: relative;
+  width: 92%;
+  height: 35px;
+  border: none;
+  border-radius: 3px;
+}
+.Plans .Plans-main-box-boxs-btn:hover:before {
+  position: absolute;
+  content: "";
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  top: 0px;
+  right: 0px;
+  background-color: rgb(246, 153, 72);
+  animation: color2 1.5s linear forwards;
+}
+@keyframes color2 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.Plans .Plans-main-box-boxs-btn-a {
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.838);
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  padding: 12px 0px;
+  position: absolute;
+  padding: 8px 0px;
+}
+.Plans .Plans-main-box-boxs-btn-a:hover {
+  color: white;
+  animation: color1 0.8s linear forwards;
+}
+@keyframes color1 {
+  0% {
+    color: rgba(0, 0, 0, 0.838);
+  }
+  100% {
+    color: white;
+  }
+}
+
+.box-a {
+  text-align: left;
+  background: conic-gradient(rgba(211, 211, 211, 0.77), rgba(227, 130, 19, 0.768627451));
+  background: linear-gradient(rgba(255, 68, 0, 0.641), rgba(227, 130, 19, 0.8980392157));
+  width: 240px;
+  min-height: 300px;
+  max-height: 410px;
+  padding: 30px 0px 25px 15px;
+  border: none;
+  border-radius: 5px;
+  margin-top: -18px;
+  margin-left: 0px;
+  margin-right: 0px;
+  animation: box1 2s linear forwards;
+}
+@keyframes box1 {
+  0% {
+    transform: translateX(200px);
+  }
+}
+
+.arrow1 {
+  font-size: 18px;
+  position: absolute;
+  margin-left: 8px;
+}/*# sourceMappingURL=Plans.css.map */

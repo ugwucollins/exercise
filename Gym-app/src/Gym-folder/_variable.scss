@@ -1,0 +1,48 @@
+@mixin Flex($direction,$section,$gap) {
+    display: flex;
+    justify-content: $section;
+    text-align: center;
+    align-items: center;
+    gap: $gap;
+    flex-direction: $direction;
+}
+@mixin Flex2($direction,$gap) {
+    display: flex;
+    text-align: left;
+    gap: $gap;
+    flex-direction: $direction;
+}
+@mixin Grid ($size1,$size2,$align,$content){
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax($size1, $size2));
+    text-align: $align;
+    align-items: center;
+    justify-content: $content;
+    gap: 10px;
+}
+@mixin text{
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    padding: 12px 0px;
+    position: absolute;
+}
+@mixin Mobile($width) {
+    @media screen and (max-width:$width){
+        @content;
+    }
+}
+@mixin right{
+    position: absolute;
+    right: 10px;
+    top: 31px;
+    padding: 8px 4px;
+    cursor: pointer;
+}
+@mixin before{
+    position: absolute;
+    content: '';
+    cursor: pointer;
+}
+

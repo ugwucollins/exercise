@@ -1,0 +1,77 @@
+@import 'variable';
+.Image{
+    position: relative;
+    height: 36vh;
+    width: 260px;
+    overflow: hidden;
+    margin-top: -35px;
+    margin-bottom: 30px;
+
+    &-div{
+        position: relative;
+        // @include Flex(column,left,0px);
+        width: 195px;
+        height: 220px;
+        background-color: transparent;
+        border: 3.2px solid #e38213e1;
+        &::before{
+            @include before;
+            top: 34.5px;
+            left: 30px;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(255, 68, 0, 0.877),#dc821a);
+        }
+        &-span{
+            position: absolute;
+            top: 9px;
+            left: 12px;
+            width: 197px;
+            height: 230px;
+            animation:  trans-x 1.5s forwards linear;
+            background-color: white;
+            @keyframes trans-x {
+                0%{
+                    transform: translateX(200px);
+                }
+            }
+        }
+    }
+}
+
+.Word{
+    @include Flex2(column,0px);
+    row-gap: 20px;
+    animation: words-trans 1.5s linear forwards;
+    @keyframes words-trans {
+        0%{
+            transform: translateX(-200px);
+        }
+    }
+    
+    &-p{
+        font-size: 14px;
+        font-weight: 500;
+        color: lightgray;
+        white-space: pre-line;
+        line-height: 25px;
+        width: 80%;
+
+        @include Mobile(800px){
+            width: 100%;
+        }
+    }
+
+    &-span{ 
+        @include Flex2(row,0px);
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 600;
+        color: lightgray;
+        margin-bottom: 28px;
+        &-p{
+            color: #d27e1de1;
+        }
+    }
+
+}

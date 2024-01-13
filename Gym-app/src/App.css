@@ -1,0 +1,11 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Roboto, sans-serif;
+  background-color: rgba(48, 60, 64, 0.8470588235);
+}/*# sourceMappingURL=App.css.map */

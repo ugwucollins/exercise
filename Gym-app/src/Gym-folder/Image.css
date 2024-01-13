@@ -1,0 +1,80 @@
+.Image {
+  position: relative;
+  height: 36vh;
+  width: 260px;
+  overflow: hidden;
+  margin-top: -35px;
+  margin-bottom: 30px;
+}
+.Image-div {
+  position: relative;
+  width: 195px;
+  height: 220px;
+  background-color: transparent;
+  border: 3.2px solid rgba(227, 130, 19, 0.8823529412);
+}
+.Image-div::before {
+  position: absolute;
+  content: "";
+  cursor: pointer;
+  top: 34.5px;
+  left: 30px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(255, 68, 0, 0.877), #dc821a);
+}
+.Image-div-span {
+  position: absolute;
+  top: 9px;
+  left: 12px;
+  width: 197px;
+  height: 230px;
+  animation: trans-x 1.5s forwards linear;
+  background-color: white;
+}
+@keyframes trans-x {
+  0% {
+    transform: translateX(200px);
+  }
+}
+
+.Word {
+  display: flex;
+  text-align: left;
+  gap: 0px;
+  flex-direction: column;
+  row-gap: 20px;
+  animation: words-trans 1.5s linear forwards;
+}
+@keyframes words-trans {
+  0% {
+    transform: translateX(-200px);
+  }
+}
+.Word-p {
+  font-size: 14px;
+  font-weight: 500;
+  color: lightgray;
+  white-space: pre-line;
+  line-height: 25px;
+  width: 80%;
+}
+@media screen and (max-width: 800px) {
+  .Word-p {
+    width: 100%;
+  }
+}
+.Word-span {
+  display: flex;
+  text-align: left;
+  gap: 0px;
+  flex-direction: row;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 600;
+  color: lightgray;
+  margin-bottom: 28px;
+}
+.Word-span-p {
+  color: rgba(210, 126, 29, 0.8823529412);
+}/*# sourceMappingURL=Image.css.map */
