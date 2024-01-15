@@ -24,10 +24,10 @@ const Testimonials = () => {
                             name='Mathew John'
                             work='Entrepreneur'  />}                          
                             {word1 && <Word 
-                            para='  I made the right choice by choosing the fitclub and by choosing 
-                                  the right plan and program I already achieved my ideal body! 2'
-                            name='Mathew John'
-                            work='Entrepreneur'  />}                          
+                            para='  This is the right choice if you want to shape your body to your ideal shape come to fitclub 
+                                  and join the right plan and program That we have for You!'
+                            name='Tony Collins'
+                            work='CEO The Manager '  />}                          
                         </div>
 
                                 
