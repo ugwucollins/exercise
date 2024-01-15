@@ -4,6 +4,7 @@ import Word from './Word';
 import Image from './Image';
 const Testimonials = () => {
     const [word,setword]= useState(true);
+    const [word1,setword1]= useState(false);
 
     return(
         <div className="Testimonials">
@@ -17,7 +18,16 @@ const Testimonials = () => {
                         <p className="what2 Testimonials-main-all-word-p2">say about us</p>
 
                         <div className="Testimonials-main-all-word-l">
-                            {word && <Word />}                          
+                            {word && <Word 
+                            para='  I made the right choice by choosing the fitclub and by choosing 
+                                  the right plan and program I already achieved my ideal body!'
+                            name='Mathew John'
+                            work='Entrepreneur'  />}                          
+                            {word1 && <Word 
+                            para='  I made the right choice by choosing the fitclub and by choosing 
+                                  the right plan and program I already achieved my ideal body! 2'
+                            name='Mathew John'
+                            work='Entrepreneur'  />}                          
                         </div>
 
                                 
@@ -41,12 +51,18 @@ const Testimonials = () => {
                             <div className="Testimonials-main-all-img-section-btn">
                                 <span className="Testimonials-main-all-img-section-btn-arrow bx bx-left-arrow-alt"  onClick={() => {
                                   setword(false);
+                                  setword1(true);
                                }}></span>
-                                <span className="Testimonials-main-all-img-section-btn-arrow1 bx bx-right-arrow-alt"></span>
+                                <span className="Testimonials-main-all-img-section-btn-arrow1 bx bx-right-arrow-alt"
+                                onClick={() => {
+                                    setword(true);
+                                    setword1(false);
+                                 }}></span>
                             </div>
 
                             <div className="Testimonials-main-all-img-section-box">
-                                    <Image />
+                                {word &&  <Image image={<img src="gym.jpg" alt="founders"  className="Image-div-span-img" />} />} 
+                                {word1 &&  <Image image={<img src="gym1.jpg" alt="founders"  className="Image-div-span-img" />} />} 
                             </div>
                         </div>
 

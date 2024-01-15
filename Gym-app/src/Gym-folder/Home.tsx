@@ -1,12 +1,14 @@
 import './Index.scss'
 import Header from './Header';
+import { Link } from 'react-router-dom';
+
 const Index = ({menus}:any) => {
 
   return (
     <>
     <div className="Home">
         <div className="Home-main">
-          <audio src="audio.mp3" autoPlay></audio>
+          {/* <audio src="audio.mp3" autoPlay></audio> */}
           <Header menus={menus} />
 
           <div className="Home-main-fit">
@@ -69,8 +71,8 @@ const Index = ({menus}:any) => {
 
         </div>
         <div className="Home-second-main">
-          <button className="Home-second-main-btn">
-            Join Now
+          <button  className="Home-second-main-btn">
+            <Link to='/Join' className="Home-second-main-btn-a">Join Now</Link>
           </button>
           <div className="Home-second-main-div">
             <span className="Home-second-main-div-span bx bxs-heart"></span>

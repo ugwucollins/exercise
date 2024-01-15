@@ -30,12 +30,18 @@
   width: 197px;
   height: 230px;
   animation: trans-x 1.5s forwards linear;
-  background-color: white;
 }
 @keyframes trans-x {
   0% {
     transform: translateX(200px);
   }
+}
+.Image-div-span-img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 197px;
+  height: 230px;
 }
 
 .Word {

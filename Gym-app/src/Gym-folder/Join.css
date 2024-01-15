@@ -1,0 +1,117 @@
+.Join {
+  min-height: 100vh;
+}
+.Join .Join-all {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 0px;
+  flex-direction: column;
+}
+.Join .Join-all-header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  margin: 22px 0px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  gap: 0px;
+  flex-direction: row;
+  background-color: rgb(79, 90, 94);
+  padding: 5px 0px 0px 0px;
+  width: 100%;
+  z-index: 1;
+}
+.Join .Join-all-header-word {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row;
+  color: white;
+  margin-left: 20px;
+  text-transform: uppercase;
+}
+.Join .Join-all-header-word-p {
+  color: white;
+  font-size: 40px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Charmonman;
+}
+.Join .Join-all-header-word-span {
+  position: relative;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+.Join .Join-all-header-word-span-p {
+  text-align: left;
+}
+.Join .Join-all-header-btn {
+  width: 85px;
+  height: 40px;
+  border: none;
+  border-radius: 2px;
+  margin-right: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.Join .Join-all-header-btn:hover::before {
+  position: absolute;
+  content: "";
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.878);
+  top: 0px;
+  left: 0px;
+  border-radius: 2px;
+  animation: btn-color 1s linear forwards;
+}
+.Join .Join-all-header-btn-a {
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  padding: 12px 0px;
+  position: absolute;
+  padding: 10px 0px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 600;
+  color: black;
+}
+.Join .Join-all-header-btn-a:hover {
+  color: white;
+  animation: btn-color2 1s linear forwards;
+}
+.Join .Join-all-video {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 400px));
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  row-gap: 5px;
+  column-gap: 20px;
+  position: relative;
+}
+.Join .Join-all-video-a {
+  position: relative;
+  width: 400px;
+  height: 220px;
+  margin-top: 10px;
+}
+
+.active-vido {
+  width: 100%;
+  height: 70vh;
+  margin-top: 10px;
+  position: relative;
+  border: none;
+}/*# sourceMappingURL=Join.css.map */

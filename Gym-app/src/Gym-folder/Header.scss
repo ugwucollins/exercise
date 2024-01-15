@@ -4,10 +4,16 @@
     @include Flex(row,space-between,10px);
     margin: 6px 10px 0px 10px;
     position: fixed;
-    z-index: 2;
+    z-index: 4;
     width: 76%;
     background-color: transparent;
-
+  
+    @include Mobile(630px){
+        width: 95%;
+    }
+    @include Mobile(500px){
+        width: 90%;
+    }
 
     #{&}-fit{
         @include Flex(row,center,10px);
@@ -123,12 +129,14 @@
                     left: 0px;
                 }
             }
+
             &-close{
               display: none;
             }
 
             &-bar{
                 // @include Flex(column,center,1px);
+
                 position: relative;
                 cursor: pointer;
                 width: 35px;

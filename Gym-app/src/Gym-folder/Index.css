@@ -5,16 +5,35 @@
   align-items: center;
   gap: 0px;
   flex-direction: row;
-  height: 100vh;
-  background-color: rgba(48, 60, 64, 0.8470588235);
+  min-height: 100vh;
   background-color: sandybrown;
+}
+@media screen and (max-width: 630px) {
+  .Home {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    gap: 0px;
+    flex-direction: column;
+  }
 }
 .Home .Home-main {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   border-radius: 20px;
   position: relative;
   background: conic-gradient(from -20deg, rgba(52, 68, 74, 0.8980392157) 80%, rgba(227, 130, 19, 0.8823529412), rgba(227, 130, 19, 0.8823529412));
+}
+@media screen and (max-width: 630px) {
+  .Home .Home-main {
+    min-height: 80vh;
+  }
+}
+@media screen and (max-width: 420px) {
+  .Home .Home-main {
+    min-height: 95vh;
+  }
 }
 .Home .Home-main-fit {
   color: white;
@@ -60,20 +79,30 @@
   }
 }
 .Home .Home-main-shape {
-  height: 120px;
+  min-height: 120px;
   width: 380px;
   font-size: 51px;
   word-spacing: 10px;
   font-weight: 600;
   line-height: 70px;
   margin: 25px 0px 20px 8px;
+  white-space: wrap;
   color: white;
+}
+@media screen and (max-width: 400px) {
+  .Home .Home-main-shape {
+    font-size: 40px;
+    word-spacing: 8px;
+    font-weight: 600;
+    width: 100%;
+  }
 }
 .Home .Home-main-shape-s {
   margin-right: 20px;
   color: transparent;
   -webkit-text-stroke: 2px rgba(234, 228, 228, 0.716);
   background-color: transparent;
+  white-space: wrap;
 }
 .Home .Home-main-span {
   color: lightgray;
@@ -84,7 +113,6 @@
   align-items: center;
   gap: 0px;
   flex-direction: row;
-  margin-left: 25px;
   margin: 0px 0px 0px 25px;
 }
 @media screen and (max-width: 1200px) {
@@ -105,6 +133,12 @@
 @media screen and (max-width: 560px) {
   .Home .Home-main-span {
     width: 340px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .Home .Home-main-span {
+    width: 100%;
+    margin: 0px 0px 0px 5px;
   }
 }
 .Home .Home-main-rating {
@@ -228,7 +262,7 @@
   background-color: rgba(50, 66, 72, 0.8274509804);
   left: 0px;
   top: 0px;
-  animation: circles 2s linear forwards;
+  animation: circles 1.5s linear forwards;
 }
 @keyframes circles {
   0% {
@@ -252,9 +286,9 @@
 }
 .Home .Home-main-btn-btn1-p:hover {
   color: #e38213;
-  animation: color1 1s forwards linear;
+  animation: colors 1s forwards linear;
 }
-@keyframes color1 {
+@keyframes colors {
   0% {
     color: white;
   }
@@ -292,9 +326,9 @@
   color: #e38213;
 }
 .Home .Home-main-btn-btn2-p:hover {
-  animation: color2 2s forwards linear;
+  animation: colors2 2s forwards linear;
 }
-@keyframes color2 {
+@keyframes colors2 {
   0% {
     color: #e38213;
   }
@@ -346,6 +380,23 @@
   height: 350px;
   left: 15px;
 }
+@media screen and (max-width: 630px) {
+  .Home .Home-main-circle {
+    top: 750px;
+    left: 0px;
+    height: 450px;
+    width: 190px;
+    z-index: 1;
+  }
+}
+@media screen and (max-width: 420px) {
+  .Home .Home-main-circle {
+    top: 850px;
+    left: -30px;
+    height: 450px;
+    width: 190px;
+  }
+}
 .Home .Home-second-main {
   width: 30%;
   height: 100vh;
@@ -358,21 +409,56 @@
   flex-direction: column;
   position: relative;
 }
-@media screen and (max-width: 800px) {
-  .Home .Home-second-main {
-    background-color: #e38213;
-  }
-}
 .Home .Home-second-main-btn {
+  position: relative;
+  cursor: pointer;
   position: absolute;
   right: 10px;
   top: 31px;
   padding: 8px 4px;
   cursor: pointer;
+  white-space: nowrap;
+  width: 70px;
+  height: 40px;
   border: none;
   border-radius: 1px;
   font-weight: 700;
   right: 25px;
+}
+.Home .Home-second-main-btn:hover:before {
+  position: absolute;
+  content: "";
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.781);
+  animation: btn-color 1s linear forwards;
+}
+@keyframes btn-color {
+  0% {
+    width: 0%;
+  }
+}
+.Home .Home-second-main-btn-a {
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  padding: 12px 0px;
+  position: absolute;
+  text-decoration: none;
+  color: black;
+}
+.Home .Home-second-main-btn-a:hover {
+  color: white;
+  animation: btn-color2 1s linear forwards;
+}
+@keyframes btn-color2 {
+  0% {
+    color: black;
+  }
 }
 .Home .Home-second-main-div {
   position: absolute;
@@ -403,6 +489,29 @@
   font-weight: 700;
   color: whitesmoke;
   margin-top: 10px;
+}
+@media screen and (max-width: 630px) {
+  .Home .Home-second-main {
+    width: 100%;
+    background-color: rgba(52, 68, 74, 0.8823529412);
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+    flex-direction: row-reverse;
+    height: 60vh;
+  }
+  .Home .Home-second-main-btn {
+    margin-top: 0px;
+  }
+  .Home .Home-second-main-div {
+    left: 10px;
+    width: 100px;
+    padding: 12px 11px;
+    margin-top: 0px;
+    z-index: 2;
+  }
 }
 
 .Home-main-rating-span-div {
@@ -497,18 +606,6 @@
   height: 430px;
   width: 430px;
 }
-@media screen and (max-width: 800px) {
-  .Home-img-image {
-    height: 400px;
-    width: 370px;
-  }
-}
-@media screen and (max-width: 700px) {
-  .Home-img-image {
-    height: 400px;
-    width: 310px;
-  }
-}
 @media screen and (max-width: 1000px) {
   .Home-img {
     right: 0px;
@@ -523,9 +620,34 @@
   .Home-img {
     left: 400px;
   }
+  .Home-img-image {
+    height: 400px;
+    width: 370px;
+  }
 }
 @media screen and (max-width: 700px) {
   .Home-img {
     right: 0px;
+  }
+  .Home-img-image {
+    height: 400px;
+    width: 310px;
+  }
+}
+@media screen and (max-width: 630px) {
+  .Home-img {
+    left: 60px;
+    top: 750px;
+    z-index: 2;
+  }
+  .Home-img-image {
+    height: 430px;
+    width: 400px;
+  }
+}
+@media screen and (max-width: 420px) {
+  .Home-img {
+    left: 40px;
+    top: 850px;
   }
 }/*# sourceMappingURL=Index.css.map */

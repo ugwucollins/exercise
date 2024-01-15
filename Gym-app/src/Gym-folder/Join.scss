@@ -1,0 +1,97 @@
+@import 'variable';
+.Join{
+    min-height: 100vh;
+    #{&}-all{
+        @include Flex(column,center,0px);
+        &-header{
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0px;
+            margin: 22px 0px;
+            @include Flex(row,space-between,0px);
+            // background-color: rgb(82, 94, 98);
+            background-color: rgb(79, 90, 94);
+            padding: 5px 0px 0px 0px;
+            width: 100%;
+            z-index: 1;
+
+
+            &-word{
+                @include Flex(row,center,10px);
+                color: white;
+                margin-left: 20px;
+                text-transform: uppercase;
+                
+                &-p{
+                    color: white;
+                    font-size: 40px;
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    font-family: Charmonman;
+                }
+                &-span{
+                    position: relative;
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: white;
+                    &-p{
+                        text-align: left;
+                    }
+                }
+            }
+            &-btn{
+                width: 85px;
+                height: 40px;
+                border: none;
+                border-radius: 2px;
+                margin-right: 20px;
+                position: relative;
+                overflow: hidden;
+                &:hover::before{
+                    @include before;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.878);
+                    top: 0px;
+                    left: 0px;
+                    border-radius: 2px;
+                    animation: btn-color 1s linear forwards;
+                }
+
+                &-a{
+                    @include text;
+                    padding: 10px 0px;
+                    text-decoration: none;
+                    font-size: 17px;
+                    font-weight: 600;
+                    color: black;
+                    &:hover{
+                        color: white;
+                        animation: btn-color2 1s linear forwards;
+                    }
+                }
+            }
+        }
+        &-video{
+            @include Grid(100px,400px,center,center);
+            width: 100%;
+            row-gap: 5px;
+            column-gap: 20px;
+            position: relative;
+
+            &-a{
+                position: relative;
+                width: 400px;
+                height: 220px;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+.active-vido{
+    width: 100%;
+    height: 70vh;
+    margin-top: 10px;
+    position: relative;
+    border: none;
+}

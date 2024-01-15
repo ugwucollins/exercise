@@ -1,10 +1,12 @@
 import './Image.scss';
 
-const Image = () => {
+const Image = ({image}:any) => {
     return(
         <div className="Image">
             <div className="Image-div">
-                <span className="Image-div-span"></span>
+                <span className="Image-div-span">
+                    {image}
+                </span>
             </div>
         </div>
     )
