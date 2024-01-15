@@ -1,4 +1,5 @@
-import './Program.scss'
+import './Program.scss';
+import { Link } from 'react-router-dom';
 
 const Program = () => {
 
@@ -21,11 +22,12 @@ const Program = () => {
                             through many exercises
                         </p>
                         <button className="Program-main-box-box1-btn">
-                            <a href="" className='Program-main-box-box1-btn-a'>
-                                Join Now <span className='bx bx-right-arrow-alt arrow'></span>
-                            </a>
+                            <Link to='/Join' className='Program-main-box-box1-btn-a'>
+                                 Join Now <span className='bx bx-right-arrow-alt arrow'></span>
+                            </Link>
                         </button>
                     </div>
+
                     <div className="Program-main-box-box1">
                         <span className="Program-main-box-box1-icon bx bx-run"></span>
                         <p className="Program-main-box-box1-p">Cardio Training</p>
@@ -34,11 +36,12 @@ const Program = () => {
                             in range of 20 until 30 minutes
                         </p>
                         <button className="Program-main-box-box1-btn">
-                            <a href="" className='Program-main-box-box1-btn-a'>
-                                Join Now <span className='bx bx-right-arrow-alt arrow'></span>
-                            </a>
+                            <Link to='/Join' className='Program-main-box-box1-btn-a'>
+                                 Join Now <span className='bx bx-right-arrow-alt arrow'></span>
+                            </Link>
                         </button>
                     </div>
+
                     <div className="Program-main-box-box1">
                         <span className="Program-main-box-box1-icon bx bxs-hot"></span>
                         <p className="Program-main-box-box1-p">Fat Burning</p>
@@ -47,11 +50,12 @@ const Program = () => {
                             to get rid of your fat and lose their weight
                         </p>
                         <button className="Program-main-box-box1-btn">
-                            <a href="" className='Program-main-box-box1-btn-a'>
-                                Join Now <span className='bx bx-right-arrow-alt arrow'></span>
-                            </a>
+                            <Link to='/Join' className='Program-main-box-box1-btn-a'>
+                                 Join Now <span className='bx bx-right-arrow-alt arrow'></span>
+                            </Link>
                         </button>
                     </div>
+
                     <div className="Program-main-box-box1">
                         <span className="Program-main-box-box1-icon bx bxs-shield-plus"></span>
                         <p className="Program-main-box-box1-p">Health Fitness</p>
@@ -60,9 +64,9 @@ const Program = () => {
                             exercises only for their body fitness and building
                         </p>
                         <button className="Program-main-box-box1-btn">
-                            <a href="" className='Program-main-box-box1-btn-a'>
-                                Join Now <span className='bx bx-right-arrow-alt arrow'></span>
-                            </a>
+                            <Link to='Join' className='Program-main-box-box1-btn-a'>
+                                 Join Now <span className='bx bx-right-arrow-alt arrow'></span>
+                            </Link>
                         </button>
                     </div>
                 </div>
