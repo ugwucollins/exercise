@@ -1,10 +1,24 @@
 import { useState } from 'react';
 import './Testimonials.scss';
-import Word from './Word';
-import Image from './Image';
-const Testimonials = () => {
-    const [word,setword]= useState(true);
-    const [word1,setword1]= useState(false);
+
+interface Props{
+    Texts:string[],
+    Images:string[],
+    Names:string[],
+    Works:string[],
+}
+
+
+const Testimonials = ({Texts,Images,Names,Works}:Props) => {
+    
+    const [slideIndex,setslideIndex] = useState(0);
+
+    function handlePrev() {
+        setslideIndex(index=> index === 0 ?Texts.length - 1 :index - 1);
+    }
+    function handleNext() {
+        setslideIndex(index=> index === Texts.length - 1 ? 0 :index + 1);
+    }
 
     return(
         <div className="Testimonials">
@@ -18,16 +32,39 @@ const Testimonials = () => {
                         <p className="what2 Testimonials-main-all-word-p2">say about us</p>
 
                         <div className="Testimonials-main-all-word-l">
-                            {word && <Word 
+                            <div className="slider">
+                                {Texts.map((index) => <p key={index} 
+                                className='slider-contain'
+                                > {Texts[slideIndex]}</p>)}
+                            </div>
+
+                          <div className="flex">
+
+                            <div className="flex-div">
+                                {Names.map((index) => <p key={index} 
+                                className='flex-div-contain'
+                                > {Names[slideIndex]} - </p>)}
+                            </div>
+                            
+                            <div className="flex-div1">
+                                {Works.map((index) => <p key={index} 
+                                className='flex-div1-contain'
+                                > {Works[slideIndex]}</p>)}
+                            </div>
+
+                          </div>
+                          
+
+                            {
+                            /* {word && <Word 
                             para='  I made the right choice by choosing the fitclub and by choosing 
                                   the right plan and program I already achieved my ideal body!'
                             name='Mathew John'
                             work='Entrepreneur'  />}                          
                             {word1 && <Word 
-                            para='  This is the right choice if you want to shape your body to your ideal shape come to fitclub 
-                                  and join the right plan and program That we have for You!'
-                            name='Tony Collins'
-                            work='CEO The Manager '  />}                          
+                            para='name='Tony Collins'
+                            work='CEO The Manager '  />}                           */
+                            }
                         </div>
 
                                 
@@ -49,20 +86,30 @@ const Testimonials = () => {
 
                         <div className="Testimonials-main-all-img-section">
                             <div className="Testimonials-main-all-img-section-btn">
-                                <span className="Testimonials-main-all-img-section-btn-arrow bx bx-left-arrow-alt"  onClick={() => {
-                                  setword(false);
-                                  setword1(true);
-                               }}></span>
-                                <span className="Testimonials-main-all-img-section-btn-arrow1 bx bx-right-arrow-alt"
-                                onClick={() => {
-                                    setword(true);
-                                    setword1(false);
-                                 }}></span>
+
+                                <button className="Testimonials-main-all-img-section-btn-arrow" onClick={handlePrev}>
+                                   <i className='bx bx-left-arrow-alt'></i>
+                                </button>
+
+                                <button className="Testimonials-main-all-img-section-btn-arrow1" onClick={handleNext}>
+                                   <i className='bx bx-right-arrow-alt'></i>
+                                </button>
+                              
                             </div>
 
                             <div className="Testimonials-main-all-img-section-box">
-                                {word &&  <Image image={<img src="gym.jpg" alt="founders"  className="Image-div-span-img" />} />} 
-                                {word1 &&  <Image image={<img src="gym1.jpg" alt="founders"  className="Image-div-span-img" />} />} 
+                                 <div className="Image">
+                                    <div className="Image-div">
+                                        <span className="Image-div-span">
+                                             {Images.map(image => 
+                                               <img src={Images[slideIndex]}
+                                            className='Image-div-span-contain2' 
+                                            key={image}
+                                             alt="gym-photos" />
+                                             )}
+                                             </span>
+                                         </div>
+                                     </div> 
                             </div>
                         </div>
 

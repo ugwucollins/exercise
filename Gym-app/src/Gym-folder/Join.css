@@ -23,7 +23,7 @@
   background-color: rgb(79, 90, 94);
   padding: 5px 0px 0px 0px;
   width: 100%;
-  z-index: 1;
+  z-index: 4;
 }
 .Join .Join-all-header-word {
   display: flex;
@@ -68,7 +68,7 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.878);
   top: 0px;
-  left: 0px;
+  right: 0px;
   border-radius: 2px;
   animation: btn-color 1s linear forwards;
 }

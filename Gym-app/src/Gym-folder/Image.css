@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 .Image {
   position: relative;
   height: 36vh;
@@ -83,4 +89,31 @@
 }
 .Word-span-p {
   color: rgba(210, 126, 29, 0.8823529412);
+}
+
+.slider-img {
+  position: relative;
+  background-color: red;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.slider-img-imgs {
+  width: 100%;
+  aspect-ratio: 7/2;
+  object-fit: cover;
+  object-fit: fill;
+  display: block;
+}
+
+.looked {
+  padding: 5px 2px;
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.lookedno {
+  padding: 5px 2px;
 }/*# sourceMappingURL=Image.css.map */

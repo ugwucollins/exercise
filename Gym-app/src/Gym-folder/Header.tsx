@@ -7,6 +7,10 @@ const Header = ({menus}:any) => {
     const[dropdown,setdropdown] = useState(false);
     const[dropdown1,setdropdown1] = useState(true);
     const[nav,setnav] = useState(true);
+    // const closeDrop = () => {
+    //     setdropdown1(dropdown1 => !dropdown1);
+    //     setnav(false&&dropdown1)
+    // }
 
     return(
         <div className=" Header">

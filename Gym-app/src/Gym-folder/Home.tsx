@@ -8,7 +8,6 @@ const Index = ({menus}:any) => {
     <>
     <div className="Home">
         <div className="Home-main">
-          {/* <audio src="audio.mp3" autoPlay></audio> */}
           <Header menus={menus} />
 
           <div className="Home-main-fit">
@@ -22,7 +21,8 @@ const Index = ({menus}:any) => {
           </div>
           
           <span className="Home-main-span">
-            In here ew will help you to shape and build your ideal body and live up your lifeto fullest
+            In here we will help you to shape and build your ideal body
+             and live up your life to the fullest
           </span>
 
           <div className="Home-main-rating">
@@ -57,7 +57,7 @@ const Index = ({menus}:any) => {
 
           <div className="Home-main-btn">
             <button className="Home-main-btn-btn1">
-              <p className="Home-main-btn-btn1-p">Get Started</p>
+              <Link to='/Join' className="Home-main-btn-btn1-p">Get Started</Link>
             </button>
             <button className="Home-main-btn-btn2">
               <p className="Home-main-btn-btn2-p">Learn More</p>
