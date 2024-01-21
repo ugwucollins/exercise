@@ -77,6 +77,11 @@
   border: none;
   background-color: transparent;
 }
+@media screen and (max-width: 410px) {
+  .Testimonials .Testimonials-main-all-img-section-btn-arrow, .Testimonials .Testimonials-main-all-img-section-btn-arrow1 {
+    margin-left: 0px;
+  }
+}
 .Testimonials .Testimonials-main-all-img-section-btn-arrow1 {
   margin-left: 15px;
 }
