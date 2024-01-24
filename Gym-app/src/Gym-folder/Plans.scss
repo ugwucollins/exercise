@@ -2,6 +2,8 @@
 .Plans{
     min-height: 100vh;
     background: radial-gradient(#e9810b5e,#303c40);
+    width: 100%;
+
     #{&}-main{
         @include Flex(column,center,0px);
         position: relative;
@@ -12,6 +14,8 @@
             font-weight: 800;
             color: white;
             text-transform: uppercase;
+            width: 100%;
+
 
             &-span{
                 margin: 0px 40px 0px 40px;
@@ -37,7 +41,8 @@
                 // background: linear-gradient(to right,#e38213c4,#34444a81);
                 // background: conic-gradient(rgba(211, 211, 211, 0.77),#e38213c4);
                 // background: linear-gradient(rgba(255, 68, 0, 0.641),#e38213e5);
-                width: 240px;
+                width: 100%;
+                max-width: 240px;
                 height: auto;
                 background: rgb(79, 76, 76);
                 filter: brightness(2px);
@@ -141,7 +146,8 @@
     text-align: left;
     background: conic-gradient(rgba(211, 211, 211, 0.77),#e38213c4);
     background: linear-gradient(rgba(255, 68, 0, 0.641),#e38213e5);
-    width: 240px;
+    width: 100%;
+    max-width: 240px;
     min-height: 300px;
     max-height: 410px;
     padding: 30px 0px 25px 15px;

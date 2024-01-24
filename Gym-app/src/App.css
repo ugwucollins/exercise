@@ -8,4 +8,10 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-family: Roboto, sans-serif;
   background-color: rgba(48, 60, 64, 0.8470588235);
+}
+
+@media screen and (max-width: 250px) {
+  .font-all {
+    font-size: 30px;
+  }
 }/*# sourceMappingURL=App.css.map */

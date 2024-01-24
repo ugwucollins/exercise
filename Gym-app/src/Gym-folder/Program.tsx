@@ -7,10 +7,10 @@ const Program = () => {
         <div className="Program">
             <div className="Program-main">
                 {/* <h1 className="Program-main-h1">Our Program</h1> */}
-                <div className="Program-main-explore">
-                    <span className="Program-main-explore-space">explore our </span>
-                    Programs
-                    <span className="Program-main-explore-space"> to shape you</span>
+                <div className="Program-main-explore font-all">
+                    <span className="Program-main-explore-space font-all">explore our </span>
+                    <span className='pro font-all'>Programs</span>
+                    <span className="Program-main-explore-space font-all"> to shape you</span>
                 </div>
 
                 <div className="Program-main-box">

@@ -8,10 +8,10 @@ const Plans = () => {
     return(
         <div className="Plans">
             <div className="Plans-main">
-                <div className="Plans-main-words">
-                    <span className="Plans-main-words-span">Ready to start </span>
-                    Your journey
-                    <span className="Plans-main-words-span"> now withus</span>
+                <div className="Plans-main-words font-all">
+                    <span className="Plans-main-words-span font-all">Ready to start </span>
+                   <span className='font-all'> Your journey</span>
+                    <span className="Plans-main-words-span font-all"> now withus</span>
                 </div>
 
                 <div className="Plans-main-box">

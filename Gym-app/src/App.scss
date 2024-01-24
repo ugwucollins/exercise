@@ -1,3 +1,4 @@
+
 *{
     padding: 0;
     margin: 0;
@@ -7,4 +8,10 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-family: Roboto,sans-serif;
     background-color:#303c40d8;
+}
+
+@media screen and (max-width:250px) {
+    .font-all{
+        font-size: 30px;
+    }
 }

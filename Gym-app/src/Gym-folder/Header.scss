@@ -9,12 +9,9 @@
     background-color: transparent;
   
     @include Mobile(630px){
-        width: 95%;
+        width: 100%;
+        padding: 0px 22px 0px 0px;
     }
-    @include Mobile(500px){
-        width: 90%;
-    }
-
     #{&}-fit{
         @include Flex(row,center,10px);
         color: white;

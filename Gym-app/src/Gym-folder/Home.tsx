@@ -17,7 +17,7 @@ const Index = ({menus}:any) => {
           </div>
 
           <div className="Home-main-shape">
-            <span className="Home-main-shape-s">SHAPE</span>YOUR IDEAL BODY
+            <span className="Home-main-shape-s"> SHAPE </span>YOUR IDEAL BODY
           </div>
           
           <span className="Home-main-span">
@@ -81,6 +81,7 @@ const Index = ({menus}:any) => {
           </div>
         </div>
     </div>
+
     <div className="Home-img">
       {/* <img src="gym.png" alt="gym" className='Home-img-image' /> */}
       <img src="gym2.png" alt="gym" className='Home-img-image' />

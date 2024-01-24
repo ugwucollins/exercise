@@ -13,12 +13,8 @@
 }
 @media screen and (max-width: 630px) {
   .Header {
-    width: 95%;
-  }
-}
-@media screen and (max-width: 500px) {
-  .Header {
-    width: 90%;
+    width: 100%;
+    padding: 0px 22px 0px 0px;
   }
 }
 .Header .Header-fit {

@@ -18,9 +18,11 @@ const Choose= () => {
 
                     <div className="Choose-all-main-words">
                         <p className="h3">Some Reasons</p>
-                        <p className='Choose-all-main-words-p'>
-                            <span className='why'>Why </span>
-                            choose us?
+                        <p className='Choose-all-main-words-p font-all'>
+                            <span className='why font-all'>Why </span>
+                            <span className="font-all">
+                                choose us?
+                            </span>
                         </p>
                         <div className="Choose-all-main-words-div">
                             <span className="Choose-all-main-words-div-span">

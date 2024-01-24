@@ -71,12 +71,15 @@ const Testimonials = ({Texts,Images,Names,Works}:Props) => {
                         <div className="Testimonials-section">
                             <div className="Testimonials-section-border1"></div>
 
-                            <span className="Testimonials-section-span what2">
-                                <p className="what">Ready to </p>level up &nbsp;
+                            <span className="Testimonials-section-span what2 font-all">
+                                <p className="what font-all">Ready to </p>
+                                <span className="font-all">level up</span> 
+                                &nbsp;
                             </span>
 
-                            <span className="Testimonials-section-span what2">
-                            your body <p className="what">with us?</p> 
+                            <span className="Testimonials-section-span what2 font-all">
+                            <span className="font-all">your body</span> 
+                            <p className="what font-all">with us?</p> 
                             </span>
                         </div>
 
@@ -147,7 +150,7 @@ const Testimonials = ({Texts,Images,Names,Works}:Props) => {
                             <a href="https://instagram.com/tonycollinsu?igshid=YWYwM2I1ZDdmOQ==" className='bx bxl-instagram footer-icon-span-a'></a>
                             <a href="" className='bx bxl-linkedin footer-icon-span-a'></a>
                         </span>
-
+                        
                         <span className="footer-icon-span1">
                             <p className="footer-icon-span1-p">F</p>
                             <span className="footer-icon-span1-p1">
